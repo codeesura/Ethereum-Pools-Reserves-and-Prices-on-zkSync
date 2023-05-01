@@ -5,7 +5,7 @@ import { Deployer } from "@matterlabs/hardhat-zksync-deploy";
 
 // An example of a deploy script that will deploy and call a simple contract.
 export default async function (hre: HardhatRuntimeEnvironment) {
-  console.log(`Running deploy script for the Greeter contract`);
+  console.log(`Running deploy script for the -MyContract- contract`);
 
   // Initialize the wallet.
   const wallet = new Wallet("PRIVATE_KEY");
