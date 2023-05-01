@@ -1,0 +1,9 @@
+{
+  "name": "ethereum-pools-reserves-prices-zksync",
+  "version": "1.0.0",
+  "description": "An example application that displays the pools, reserves, and prices of Ethereum on zkSync",
+  "main": "index.js",
+  "dependencies": {
+    "ethers": "^5.5.2",
+  }
+}
