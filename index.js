@@ -1,5 +1,6 @@
 const { ethers } = require("ethers");
 
+// Set contract address ABI
 const contractABI_myContract = [
 	{
 		"inputs": [],
@@ -108,15 +109,16 @@ const contractABI_myContract = [
 	}
 ];
 async function get() {
-  // Connect to Ethereum network using ethers.js
+  // Connect to zkSync network using ethers.js
   const provider = new ethers.providers.JsonRpcProvider('https://mainnet.era.zksync.io');
 
-  // Set contract addresses and ABI
+  // Set contract addresses
   const contractAddress_myContract = "0x0A3697050A8030db921b402A09d8aE64e22316b0"; // That my contract address
 
   // Create contract instances
   const myContractInstance = new ethers.Contract(contractAddress_myContract, contractABI_myContract, provider);
 
+  // Interacting with the getReservesFromPools() function
   const reserves_Pools = await myContractInstance.getReservesFromPools();
   console.log("---------------Pool Info---------------------");
   console.log("Pool_1 total USDC reserves :",reserves_Pools.reserve0_pool1.toString() / 1e6);
